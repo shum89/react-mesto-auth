@@ -16,18 +16,17 @@
 
     .header__login-container_mobile-enter {
         transform: translateY(-110%);
-        transition: all ease 0.5s;
     }
     .header__login-container_mobile-enter-active {
         transform: translateY(0%);
-        transition: all ease 0.5s;
+        transition: all ease-in-out 0.5s;
     }
     .header__login-container_mobile-exit {
-        transition: all ease 0.5s;
+        
     }
 
     .header__login-container_mobile-exit-active {
-        transform: translateY(-110%);
-        transition: all ease 0.5s;
+        transform: translateY(-120%);
+        transition: all ease-in-out 0.5s;
     }
 }
