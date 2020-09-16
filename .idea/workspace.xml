@@ -29,134 +29,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mesto-react.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__delete-button/_hidden/card__delete-button_hidden.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__delete-button/_visible/card__delete-button_visible.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__delete-button/card__delete-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__info-container/card__info-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__like-container/card__like-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__like-counter/_animation/card__like-counter_animation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__like-counter/card__like-counter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__like/_active/card__like_active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__like/card__like.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__photo/card__photo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/__title/card__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/card/card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/cards/cards.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/content/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/footer/__title/footer__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/footer/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/__logo/header__logo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page/page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page404/__button-container/page404__button-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page404/__button/page404__button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page404/__gif-wrap/page404__gif-wrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page404/__gif/page404__gif.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page404/__subtitle/page404__subtitle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page404/__title/page404__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page404/page404.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__button-close/popup__button-close.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__button-submit/_disabled/popup__button-submit_disabled.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__button-submit/_loading/popup__button-submit_loading.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__button-submit/popup__button-submit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__caption/popup__caption.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__container/popup__container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__form-label/popup__form-label.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__form/popup__form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__image-container/popup__image-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input-error/popup__input-error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input-title/popup__input-title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input/_type/popup__input_type_error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input/popup__input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__overlay/_image/popup__overlay_image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__overlay/popup__overlay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__photo/popup__photo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__title/popup__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/_form-background/popup_form-background.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/_opened/popup_opened.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__add-button/profile__add-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar-image/profile__avatar-image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__edit-avatar/profile__edit-avatar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__edit-button/profile__edit-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__info/profile__info.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__subtitle/profile__subtitle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__text-container/profile__text-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__title/profile__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__wrap/profile__wrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/spinner/spinner.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AuthForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ImagePopup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InfoTooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Page404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter-Black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter-Black.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter-roman.var.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/Inter.var.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/Inter/inter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Close-Icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Vector.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/add-button.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/bin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/edit-button.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/fail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/like.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/like_active.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/pen-avatar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/penAvatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/success.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/GiphyApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/formHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/reducerForAuth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,7 +106,7 @@
       <workItem from="1597047512739" duration="20637000" />
       <workItem from="1599818353830" duration="15936000" />
       <workItem from="1600074221029" duration="11301000" />
-      <workItem from="1600243308858" duration="21347000" />
+      <workItem from="1600243308858" duration="22028000" />
     </task>
     <task id="LOCAL-00001" summary="feture: can close popup with Esc button">
       <created>1597076269556</created>
@@ -242,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597076269556</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feature: add auth">
+      <created>1600270638397</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600270638397</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Feature: add auth">
+      <created>1600270663031</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600270663031</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +150,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feture: can close popup with Esc button" />
     <MESSAGE value="fix: can close image popup with Esc button" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: can close image popup with Esc button" />
+    <MESSAGE value="Feature: add auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: add auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="136" width="800" height="717" key="#Intentions" timestamp="1596538448361">
@@ -289,10 +177,10 @@
     <state x="427" y="102" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1599906316303" />
     <state x="427" y="102" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1595059825153" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1596535318792" />
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1597076281018">
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600270666785">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1597076281018" />
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600270666785" />
     <state x="456" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1600264281230">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
