@@ -106,7 +106,7 @@
       <workItem from="1597047512739" duration="20637000" />
       <workItem from="1599818353830" duration="15936000" />
       <workItem from="1600074221029" duration="11301000" />
-      <workItem from="1600243308858" duration="22028000" />
+      <workItem from="1600243308858" duration="22378000" />
     </task>
     <task id="LOCAL-00001" summary="feture: can close popup with Esc button">
       <created>1597076269556</created>
@@ -129,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600270663031</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Feature: add auth">
+      <created>1600271017838</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600271017838</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,10 +184,10 @@
     <state x="427" y="102" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1599906316303" />
     <state x="427" y="102" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1595059825153" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1596535318792" />
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600270666785">
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600271024503">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600270666785" />
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600271024503" />
     <state x="456" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1600264281230">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
