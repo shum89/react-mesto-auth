@@ -1,0 +1,16 @@
+.page404__subtitle {
+    margin-bottom: 90px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 842px) {
+    .page404__subtitle{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .page404__subtitle{
+        font-size: 19px;
+    }
+}

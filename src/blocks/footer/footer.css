@@ -1,0 +1,15 @@
+@import url(./__title/footer__title.css);
+
+.footer {
+    width: 68.89%;
+    margin-bottom: 60px;
+    max-width: 882px;
+}
+
+@media screen and (max-width: 842px) {
+    .footer {
+        width: 88.125%;
+        transition: all ease-in 0.3s;
+
+    }
+}

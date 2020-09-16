@@ -1,0 +1,37 @@
+@import url(./vendor/normalize.css);
+@import url(./fonts/Inter/inter.css);
+@import url(./blocks/page/page.css);
+@import url(./blocks/spinner/spinner.css);
+@import url(./blocks/page404/page404.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/content/content.css);
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/cards/cards.css);
+@import url(./blocks/card/card.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/__button-submit/_type/popup__button-submit_type_auth.css);
+@import url(./blocks/popup/__button-submit/_disabled/popup__button-submit_disabled.css);
+@import url(./blocks/popup/__button-submit/_loading/popup__button-submit_loading.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/__overlay/_image/popup__overlay_image.css);
+@import url(./blocks/card/__delete-button/_visible/card__delete-button_visible.css);
+@import url(./blocks/card/__delete-button/_hidden/card__delete-button_hidden.css);
+@import url(./blocks/card/__like/_active/card__like_active.css);
+@import url(./blocks/card/__like-counter/_animation/card__like-counter_animation.css);
+@import url(./blocks/popup/__title/_type/popup__title_type_auth.css);
+@import url(./blocks/popup/__container/_type/popup__container_type_auth.css);
+@import url(./blocks/popup/__input/_type/popup__input_type_error.css);
+@import url(./blocks/popup/__input/_type/popup__input_type_auth.css);
+@import url(./blocks/popup/__form-label/_type/popup__form-label_type_auth.css);
+@import url(./blocks/popup/__button-close/_type/popup__button-close_type_tooltip.css);
+@import url(./blocks/popup/__form/_type/popup__form_type_auth.css);
+@import url(./blocks/header/__login-container/_desktop/header__login-container_desktop.css);
+@import url(./blocks/burger/burger.css);
+@import url(./blocks/burger/__dash/_active/burger__dash_active.css);
+@import url(./blocks/header/__login-container/_mobile/header__login-container_mobile.css);
+@import url(./blocks/nav-link/nav-link.css);
+@import url(./blocks/nav-link/_type/nav-link_type_form.css);
+@import url(./blocks/nav-link/_type/nav-link_type_header.css);
+
+

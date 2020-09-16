@@ -1,0 +1,19 @@
+@import url(__gif/page404__gif.css);
+@import url(__button/page404__button.css);
+@import url(./__subtitle/page404__subtitle.css);
+@import url(./__title/page404__title.css);
+@import url(__gif-wrap/page404__gif-wrap.css);
+@import url(./__button-container/page404__button-container.css);
+
+.page404 {
+    max-width: 882px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 842px) {
+    .page404{
+        width: 100%;
+    }
+}
