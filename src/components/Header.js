@@ -22,7 +22,7 @@ function Header({loggedIn, onLogout,isMobileMenuOpen, onMobileMenu}) {
                      in={isMobileMenuOpen}
                      unmountOnExit timeout={500}
                      classNames={'header__login-container_mobile'}>
-                <div className='header__login-container header__login-container_mobile'>
+                <div ref={nodeRef} className='header__login-container header__login-container_mobile'>
                             <p className='header__email'>{currentUser.login.email}</p>
                             <button className='header__button-auth'
                                     type={'button'}
