@@ -14,9 +14,11 @@ function Header({loggedIn, onLogout,isMobileMenuOpen, onMobileMenu}) {
         const location = useLocation();
         const path = `${location.pathname === '/sign-up' ? 'sign-in' : 'sign-up'}`;
         const title = `${location.pathname === '/sign-up' ? 'Войти' : 'Регистрация'}`;
+        const nodeRef = React.useRef(null)
         return (
             <header className="header">
                     <CSSTransition
+                        nodeRef={nodeRef}
                      in={isMobileMenuOpen}
                      unmountOnExit timeout={500}
                      classNames={'header__login-container_mobile'}>

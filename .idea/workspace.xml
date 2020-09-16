@@ -29,7 +29,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth" />
+    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600271017838</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit&#10;commit">
+      <created>1600271581224</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600271581224</updated>
+    </task>
+    <task id="LOCAL-00006" summary="featur: auth">
+      <created>1600271638967</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600271638967</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +175,9 @@
     <MESSAGE value="feture: can close popup with Esc button" />
     <MESSAGE value="fix: can close image popup with Esc button" />
     <MESSAGE value="Feature: add auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: add auth" />
+    <MESSAGE value="commit&#10;commit" />
+    <MESSAGE value="featur: auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="featur: auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="136" width="800" height="717" key="#Intentions" timestamp="1596538448361">
@@ -178,20 +197,20 @@
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state x="234" y="193" key="IDE.errors.dialog/0.23.1440.840@0.23.1440.840" timestamp="1596534385988" />
-    <state x="98" y="262" key="MultipleFileMergeDialog" timestamp="1600271413323">
+    <state x="98" y="262" key="MultipleFileMergeDialog" timestamp="1600271545532">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="98" y="262" key="MultipleFileMergeDialog/0.23.1440.838@0.23.1440.838" timestamp="1600271413323" />
+    <state x="98" y="262" key="MultipleFileMergeDialog/0.23.1440.838@0.23.1440.838" timestamp="1600271545532" />
     <state x="427" y="102" key="SettingsEditor" timestamp="1599906316303">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="427" y="102" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1599906316303" />
     <state x="427" y="102" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1595059825153" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1596535318792" />
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600271024503">
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600271651594">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600271024503" />
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600271651594" />
     <state x="456" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1600264281230">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
