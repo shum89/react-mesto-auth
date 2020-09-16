@@ -1,0 +1,15 @@
+@import url(./__dash/burger__dash.css);
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 525px) {
+    .burger {
+        height: 21px;
+        display: block;
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+}

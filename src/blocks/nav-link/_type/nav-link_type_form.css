@@ -1,0 +1,11 @@
+.nav-link_type_form {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 525px) {
+    .nav-link_type_form {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

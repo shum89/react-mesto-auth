@@ -1,0 +1,13 @@
+.nav-link {
+    font-family: Inter;
+    text-align: center;
+    color: #FFFF;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    opacity: 0.6;
+}

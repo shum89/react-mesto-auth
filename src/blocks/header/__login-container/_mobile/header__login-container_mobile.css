@@ -1,0 +1,33 @@
+.header__login-container_mobile {
+}
+@media screen and (max-width: 525px) {
+    .header__login-container_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 40px;
+        margin-bottom: 27px;
+        border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    }
+    .header__login-container_mobile:after {
+        position: absolute;
+    }
+
+    .header__login-container_mobile-enter {
+        transform: translateY(-110%);
+        transition: all ease 0.5s;
+    }
+    .header__login-container_mobile-enter-active {
+        transform: translateY(0%);
+        transition: all ease 0.5s;
+    }
+    .header__login-container_mobile-exit {
+        transition: all ease 0.5s;
+    }
+
+    .header__login-container_mobile-exit-active {
+        transform: translateY(-110%);
+        transition: all ease 0.5s;
+    }
+}

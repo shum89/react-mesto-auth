@@ -1,0 +1,8 @@
+.popup__form-label_type_auth {
+    margin-bottom: 30px;
+    position: relative;
+}
+.popup__form-label_type_auth:last-of-type {
+    margin-bottom: 216px;
+}
+

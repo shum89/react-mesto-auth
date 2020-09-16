@@ -1,0 +1,31 @@
+
+.burger__dash {
+    background-color: #fff;
+    display: block;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+    position: relative;
+}
+
+.burger__dash::before {
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    top: 7.5px;
+    display: block;
+    width: 24px;
+}
+
+.burger__dash::after {
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    top: -7.5px;
+    display: block;
+    width: 24px;
+}

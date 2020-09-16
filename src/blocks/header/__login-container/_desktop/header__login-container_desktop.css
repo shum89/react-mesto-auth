@@ -1,0 +1,9 @@
+.header__login-container_desktop {
+    
+}
+
+@media screen and (max-width: 525px) {
+    .header__login-container_desktop {
+        display: none;
+    }
+}

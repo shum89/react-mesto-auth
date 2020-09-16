@@ -1,0 +1,14 @@
+.popup__button-submit_type_auth {
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #000;
+}
+.popup__button-submit_type_auth:hover {
+    background: #FFF;
+    opacity: 0.85;
+    border-radius: 2px;
+}
