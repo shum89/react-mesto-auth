@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 
 /**
  * burger for mobile menu
@@ -8,14 +7,12 @@ import React from "react";
  * @return {JSX.Element}
  * @constructor
  */
-function Burger({onMobileMenu, isMobileMenuOpened}) {
-
-    return (
-        <button className='burger' type='button' onClick={onMobileMenu} >
-            <span className={`burger__dash ${isMobileMenuOpened ? 'burger__dash_active' : null}`}></span>
-        </button>
-    )
-
+function Burger({ onMobileMenu, isMobileMenuOpened }) {
+  return (
+    <button className="burger" type="button" onClick={onMobileMenu}>
+      <span className={`burger__dash ${isMobileMenuOpened ? 'burger__dash_active' : null}`} />
+    </button>
+  );
 }
 
 export default Burger;

@@ -6,9 +6,9 @@ import React from 'react';
  * @constructor
  */
 function Spinner() {
-    return (
-        <div className="spinner">Loading...</div>
-    );
+  return (
+    <div className="spinner">Loading...</div>
+  );
 }
 
 export default Spinner;

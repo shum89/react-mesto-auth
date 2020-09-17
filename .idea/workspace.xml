@@ -30,8 +30,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth">
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddPlacePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfilePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImagePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImagePopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InfoTooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfoTooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Page404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/SubmitButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/GiphyApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GiphyApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/formHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/formHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/reducerForAuth.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +99,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="js.introduce.parameter.generate.optional" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="/usr/local/bin/node" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -110,6 +152,7 @@
       <workItem from="1599818353830" duration="15936000" />
       <workItem from="1600074221029" duration="11301000" />
       <workItem from="1600243308858" duration="22378000" />
+      <workItem from="1600335690410" duration="6892000" />
     </task>
     <task id="LOCAL-00001" summary="feture: can close popup with Esc button">
       <created>1597076269556</created>
@@ -167,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600284456469</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="hotfix: fixed transition animation">
+      <created>1600285002795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600285002795</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,9 +242,16 @@
     <MESSAGE value="commit&#10;commit" />
     <MESSAGE value="featur: auth" />
     <MESSAGE value="hotfix: fixed react transition group warning" />
-    <option name="LAST_COMMIT_MESSAGE" value="hotfix: fixed react transition group warning" />
+    <MESSAGE value="hotfix: fixed transition animation" />
+    <MESSAGE value="refactor: linter and form hook" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: linter and form hook" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="600" y="351" key="#ESLint" timestamp="1600360243354">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="600" y="351" key="#ESLint/0.23.1440.838@0.23.1440.838" timestamp="1600360243354" />
+    <state x="600" y="476" key="#ESLint/0.23.1440.839@0.23.1440.839" timestamp="1600352629531" />
     <state x="492" y="136" width="800" height="717" key="#Intentions" timestamp="1596538448361">
       <screen x="0" y="23" width="1440" height="840" />
     </state>
@@ -203,11 +260,19 @@
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="341" y="272" key="#Notifications/0.23.1440.838@0.23.1440.838" timestamp="1599905769195" />
+    <state x="455" y="251" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600355329383">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="455" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.839@0.23.1440.839" timestamp="1600355329383" />
     <state x="408" y="209" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600243356064">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="408" y="209" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.838@0.23.1440.838" timestamp="1600243356064" />
     <state x="408" y="209" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.840@0.23.1440.840" timestamp="1596024518123" />
+    <state x="540" y="201" key="FileChooserDialogImpl" timestamp="1600360239647">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="540" y="201" key="FileChooserDialogImpl/0.23.1440.838@0.23.1440.838" timestamp="1600360239647" />
     <state x="234" y="193" key="IDE.errors.dialog" timestamp="1596534385988">
       <screen x="0" y="23" width="1440" height="840" />
     </state>
@@ -216,16 +281,20 @@
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="98" y="262" key="MultipleFileMergeDialog/0.23.1440.838@0.23.1440.838" timestamp="1600271545532" />
-    <state x="427" y="102" key="SettingsEditor" timestamp="1599906316303">
+    <state x="59" y="38" key="SettingsEditor" timestamp="1600361013524">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="427" y="102" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1599906316303" />
-    <state x="427" y="102" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1595059825153" />
+    <state x="59" y="38" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1600361013524" />
+    <state x="257" y="25" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1600352325046" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1596535318792" />
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600284458375">
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600285004403">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600284458375" />
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600285004403" />
+    <state x="580" y="421" key="jetbrains.nodejs.interpreters-dialog" timestamp="1600360241262">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="580" y="421" key="jetbrains.nodejs.interpreters-dialog/0.23.1440.838@0.23.1440.838" timestamp="1600360241262" />
     <state x="456" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1600264281230">
       <screen x="0" y="23" width="1440" height="838" />
     </state>

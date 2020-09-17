@@ -9,35 +9,36 @@
  * @returns {object} changed state
  */
 
-export const reducerForForm = (state, {field, type, value}, initialFormValueState) => {
-    switch (type) {
-        case 'DISPATCH':
-            const updateValues = {
-                ...state.inputValues,
-                [field]: value.value,
-            }
-            const updatedValidities = {
-                ...state.inputValidities,
-                [`${field}Validity`]: value.validity.valid,
-            };
-            const updateErrors = {
-                ...state.inputErrors,
-                [`${field}Error`]: value.validationMessage
-            };
-            let formIsValid = true;
-            for (const key in updatedValidities) {
-                const keyValue = key.replace('Validity', '');
-                formIsValid = (formIsValid && updatedValidities[key] && updateValues[keyValue])
-            }
-            return {
-                inputValidities: updatedValidities,
-                inputErrors: updateErrors,
-                formValid: formIsValid,
-                inputValues: updateValues,
-            };
-        case'RESET':
-            return initialFormValueState;
-        default:
-            break;
-    }
+export const reducerForForm = (state, { field, type, value }, initialFormValueState) => {
+  switch (type) {
+    case 'DISPATCH':
+      const updateValues = {
+        ...state.inputValues,
+        [field]: value.value,
+      };
+      const updatedValidities = {
+        ...state.inputValidities,
+        [`${field}Validity`]: value.validity.valid,
+      };
+      const updateErrors = {
+        ...state.inputErrors,
+        [`${field}Error`]: value.validationMessage,
+      };
+      let formIsValid = true;
+      for (const key in updatedValidities) {
+        const keyValue = key.replace('Validity', '');
+        formIsValid = (formIsValid && updatedValidities[key] && updateValues[keyValue]);
+      }
+      return {
+        inputValidities: updatedValidities,
+        inputErrors: updateErrors,
+        formValid: formIsValid,
+        inputValues: updateValues,
+      };
+    case 'RESET':
+      return initialFormValueState;
+    default:
+      break;
+  }
 };
+

@@ -1,6 +1,6 @@
 import React from 'react';
-import PopupWithForm from "./PopupWithForm";
-import SubmitButton from "./ui/SubmitButton";
+import PopupWithForm from './PopupWithForm';
+import SubmitButton from './ui/SubmitButton';
 
 /**
  * modal window for card delete
@@ -13,21 +13,25 @@ import SubmitButton from "./ui/SubmitButton";
  * @constructor
  */
 
-function ConfirmDeletePopup({isOpen, onClose, onDeleteSubmit, card, isSubmitting}) {
+function ConfirmDeletePopup({
+  isOpen, onClose, onDeleteSubmit, card, isSubmitting,
+}) {
+  const handleDeleteSubmit = (e) => {
+    e.preventDefault();
+    onDeleteSubmit(card);
+  };
 
-    const handleDeleteSubmit = (e) => {
-        e.preventDefault();
-        onDeleteSubmit(card);
-    }
-
-    return (
-        <PopupWithForm name={'popup-delete'}
-                       title={'Вы уверены?'}
-                       isOpen={isOpen}
-                       onClose={onClose}
-                       onSubmit={handleDeleteSubmit}
-        ><SubmitButton renderSubmitAnimation={isSubmitting} isDisabled={true} buttonTitle={'Да'} /></PopupWithForm>
-    );
+  return (
+    <PopupWithForm
+      name="popup-delete"
+      title="Вы уверены?"
+      isOpen={isOpen}
+      onClose={onClose}
+      onSubmit={handleDeleteSubmit}
+    >
+      <SubmitButton renderSubmitAnimation={isSubmitting} isDisabled buttonTitle="Да" />
+    </PopupWithForm>
+  );
 }
 
 export default ConfirmDeletePopup;
