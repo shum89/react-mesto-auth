@@ -30,40 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth">
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddPlacePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditProfilePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ImagePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImagePopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InfoTooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfoTooltip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Page404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/SubmitButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/GiphyApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GiphyApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/formHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/formHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/reducerForAuth.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +119,7 @@
       <workItem from="1599818353830" duration="15936000" />
       <workItem from="1600074221029" duration="11301000" />
       <workItem from="1600243308858" duration="22378000" />
-      <workItem from="1600335690410" duration="6892000" />
+      <workItem from="1600335690410" duration="7550000" />
     </task>
     <task id="LOCAL-00001" summary="feture: can close popup with Esc button">
       <created>1597076269556</created>
@@ -217,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600285002795</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="refactor: linter and form hook">
+      <created>1600361301792</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600361301792</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,10 +261,10 @@
     <state x="59" y="38" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1600361013524" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1600352325046" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1596535318792" />
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600285004403">
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600361305346">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600285004403" />
+    <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600361305346" />
     <state x="580" y="421" key="jetbrains.nodejs.interpreters-dialog" timestamp="1600360241262">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
