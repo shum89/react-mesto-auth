@@ -7,3 +7,20 @@
     color: #000000;
     margin: 0;
 }
+
+
+.card__like-counter-enter {
+    transform: translateY(-120%);
+    opacity: 0;
+}
+.card__like-counter-enter-active{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all ease-in-out 0.5s;
+}
+
+
+.card__like-counter-exit-active {
+    transform: translateY(-120%);
+    transition: all ease-in-out 0.5s;
+}

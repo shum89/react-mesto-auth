@@ -1,4 +1,5 @@
 import React from 'react';
+import {PopupWithFormProps} from "../interfaces/props/PopupWithFormProps";
 
 /**
  * popup with form component
@@ -11,8 +12,7 @@ import React from 'react';
 function PopupWithForm({
   children, name, title,
   onClose, isOpen, onSubmit,
-
-}) {
+}:PopupWithFormProps) {
   return (
     <div className={`popup popup_type_${name} ${isOpen ? 'popup_opened' : null}`}>
       <div className="popup__container">

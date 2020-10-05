@@ -2,6 +2,9 @@ import React from 'react';
 import PopupWithForm from './PopupWithForm';
 import { reducerForForm } from '../utils/formHelper';
 import SubmitButton from './ui/SubmitButton';
+import {FormInterface} from "../interfaces/FormInterface";
+import {Action, ActionInterface} from "../interfaces/Action";
+import {AddPlaceProps} from "../interfaces/props/AddPlaceProps";
 
 /**
  * initial state of the form elements
@@ -10,7 +13,7 @@ import SubmitButton from './ui/SubmitButton';
  * formValid: boolean,
  * inputValues: {name: string, link: string}}}
  */
-const initialFormValueState = {
+const initialFormValueState:FormInterface = {
   inputValues: {
     name: '',
     link: '',
@@ -23,10 +26,10 @@ const initialFormValueState = {
     nameError: '',
     linkError: '',
   },
-  formValid: false,
+  formValidity: false,
 };
 
-const reducerForAddPlaceForm = (state, action) => reducerForForm(state, action, initialFormValueState);
+const reducerForAddPlaceForm = (state:FormInterface, action:ActionInterface) => reducerForForm(state, action, initialFormValueState);
 
 /**
  * modal window for adding place
@@ -38,17 +41,19 @@ const reducerForAddPlaceForm = (state, action) => reducerForForm(state, action, 
  */
 function AddPlacePopup({
   isOpen, onClose, onAddPlace, isSubmitting,
-}) {
+}:AddPlaceProps) {
   /**
      * reducer hook for form elemnts
      */
   const [formState, dispatchForm] = React.useReducer(reducerForAddPlaceForm, initialFormValueState);
 
+
+
   /**
      * destructured values for form elements
      */
-  const { name, link } = formState.inputValues;
-  const buttonDisabled = formState.formValid;
+  const { name = '', link = '' } = formState.inputValues;
+  const buttonDisabled = formState.formValidity;
   const { nameValidity, linkValidity } = formState.inputValidities;
   const { nameError, linkError } = formState.inputErrors;
 
@@ -56,26 +61,26 @@ function AddPlacePopup({
      * hadnler for form submit
      * @param e
      */
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     onAddPlace({
       name,
       link,
     });
     dispatchForm({
-      type: 'RESET',
+      type: Action.RESET,
     });
   };
 
   /**
      * handler for change inputs
-     * @param e
      */
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.persist();
     dispatchForm({
-      type: 'DISPATCH',
+      type:Action.DISPATCH,
       field: e.target.name,
-      value: e.target,
+      value: e,
     });
   };
 
@@ -84,7 +89,7 @@ function AddPlacePopup({
      */
   React.useEffect(() => {
     dispatchForm({
-      type: 'RESET',
+      type:Action.RESET,
     });
   }, [isOpen]);
 
@@ -92,13 +97,11 @@ function AddPlacePopup({
     <PopupWithForm
       name="add-card"
       title="Новое Место"
-      buttonTitle="Создать"
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
-      renderSubmitAnimation={isSubmitting}
-      isDisabled={buttonDisabled}
     >
+      <>
       <label className="popup__form-label">
         <input
           className={`popup__input ${nameValidity ? null : 'popup__input_type_error'}`}
@@ -106,10 +109,10 @@ function AddPlacePopup({
           name="name"
           type="text"
           placeholder="Название"
-          minLength="2"
-          maxLength="30"
+          minLength={2}
+          maxLength={30}
           required
-          value={name}
+          value={name as string}
           onChange={handleChange}
         />
         <span className="popup__input-error" id="input-title-error">{nameError}</span>
@@ -122,8 +125,9 @@ function AddPlacePopup({
           type="url"
           placeholder="Ссылка на картинку"
           required
-          value={link}
-          onChange={handleChange}
+          value={link as string}
+          onChange={(e) => {
+            handleChange(e)}}
         />
         <span
           className="popup__input-error"
@@ -133,6 +137,7 @@ function AddPlacePopup({
         </span>
       </label>
       <SubmitButton renderSubmitAnimation={isSubmitting} isDisabled={buttonDisabled} buttonTitle="Создать" />
+    </>
     </PopupWithForm>
   );
 }

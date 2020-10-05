@@ -4,15 +4,16 @@ import { CSSTransition } from 'react-transition-group';
 import logo from '../images/Vector.svg';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import Burger from './Burger';
+import {HeaderProps} from "../interfaces/props/HeaderProps";
+import {CurrentUserInterface} from "../interfaces/CurrentUserInterface";
 
 /**
- * Header component
  * @return {JSX.Element}
  */
 function Header({
   loggedIn, onLogout, isMobileMenuOpen, onMobileMenu,
-}) {
-  const currentUser = React.useContext(CurrentUserContext);
+}:HeaderProps) {
+  const currentUser:CurrentUserInterface = React.useContext(CurrentUserContext);
   const location = useLocation();
   const path = `${location.pathname === '/sign-up' ? 'sign-in' : 'sign-up'}`;
   const title = `${location.pathname === '/sign-up' ? 'Войти' : 'Регистрация'}`;

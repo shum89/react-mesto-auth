@@ -1,4 +1,5 @@
 import React from 'react';
+import {AuthFormProps} from "../interfaces/props/AuthFormProps";
 
 /**
  * Auth form
@@ -14,7 +15,7 @@ import React from 'react';
  */
 function AuthForm({
   children, title, onChange, onSubmit, value, validity, errors,
-}) {
+}:AuthFormProps) {
   return (
     <div className="popup__container popup__container_type_auth">
       <h2 className="popup__title popup__title_type_auth">{title}</h2>
@@ -26,8 +27,8 @@ function AuthForm({
             name="email"
             type="email"
             placeholder="Email"
-            minLength="2"
-            maxLength="20"
+            minLength={2}
+            maxLength={20}
             pattern="^[^@]+@[^@]+\.[^@]+$"
             required
             value={value.email}
@@ -42,8 +43,8 @@ function AuthForm({
             name="password"
             type="password"
             placeholder="Password"
-            minLength="2"
-            maxLength="200"
+            minLength={2}
+            maxLength={200}
             value={value.password}
             onChange={onChange}
             required

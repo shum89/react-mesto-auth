@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:mesto" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:mesto-react" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/CardInterface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/props/AddPlaceProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/props/MainProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/props/ProtectedRouteProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/props/RegisterProps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/card/__like-counter/_animation/card__like-counter_animation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__like-counter/_animation/card__like-counter_animation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/card/__like-counter/card__like-counter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__like-counter/card__like-counter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddPlacePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditAvatarPopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfilePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImagePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImagePopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InfoTooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfoTooltip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Page404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/SubmitButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/GiphyApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GiphyApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/formHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/formHelper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +54,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/interfaces/props/PopupWithFormProps.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -67,7 +89,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="js.introduce.parameter.generate.optional" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -79,7 +101,7 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -88,6 +110,7 @@
       <recent name="$PROJECT_DIR$/src/utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/interfaces/props" />
       <recent name="$PROJECT_DIR$/src/components/ui" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/utils" />
@@ -120,6 +143,14 @@
       <workItem from="1600074221029" duration="11301000" />
       <workItem from="1600243308858" duration="22378000" />
       <workItem from="1600335690410" duration="7550000" />
+      <workItem from="1601379325206" duration="60000" />
+      <workItem from="1601379395194" duration="1682000" />
+      <workItem from="1601386677692" duration="1324000" />
+      <workItem from="1601467828690" duration="2087000" />
+      <workItem from="1601470853631" duration="333000" />
+      <workItem from="1601490313082" duration="1245000" />
+      <workItem from="1601628171118" duration="33400000" />
+      <workItem from="1601887733056" duration="13581000" />
     </task>
     <task id="LOCAL-00001" summary="feture: can close popup with Esc button">
       <created>1597076269556</created>
@@ -200,9 +231,46 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/filippshumakov/Desktop/untitled folder/dev/mesto-auth/react-mesto-auth/src/interfaces" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -221,10 +289,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="refactor: linter and form hook" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="600" y="351" key="#ESLint" timestamp="1600360243354">
+    <state x="600" y="351" key="#ESLint" timestamp="1601720714389">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="600" y="351" key="#ESLint/0.23.1440.838@0.23.1440.838" timestamp="1600360243354" />
+    <state x="600" y="351" key="#ESLint/0.23.1440.838@0.23.1440.838" timestamp="1601720714389" />
     <state x="600" y="476" key="#ESLint/0.23.1440.839@0.23.1440.839" timestamp="1600352629531" />
     <state x="492" y="136" width="800" height="717" key="#Intentions" timestamp="1596538448361">
       <screen x="0" y="23" width="1440" height="840" />
@@ -243,37 +311,65 @@
     </state>
     <state x="408" y="209" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.838@0.23.1440.838" timestamp="1600243356064" />
     <state x="408" y="209" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.840@0.23.1440.840" timestamp="1596024518123" />
+    <state x="100" y="123" width="1240" height="638" key="DiffContextDialog" timestamp="1601379315713">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="100" y="123" width="1240" height="638" key="DiffContextDialog/0.23.1440.838@0.23.1440.838" timestamp="1601379315713" />
     <state x="540" y="201" key="FileChooserDialogImpl" timestamp="1600360239647">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="540" y="201" key="FileChooserDialogImpl/0.23.1440.838@0.23.1440.838" timestamp="1600360239647" />
-    <state x="234" y="193" key="IDE.errors.dialog" timestamp="1596534385988">
-      <screen x="0" y="23" width="1440" height="840" />
+    <state x="234" y="193" key="IDE.errors.dialog" timestamp="1601810645112">
+      <screen x="0" y="23" width="1440" height="839" />
     </state>
+    <state x="234" y="193" key="IDE.errors.dialog/0.23.1440.839@0.23.1440.839" timestamp="1601810645112" />
     <state x="234" y="193" key="IDE.errors.dialog/0.23.1440.840@0.23.1440.840" timestamp="1596534385988" />
     <state x="98" y="262" key="MultipleFileMergeDialog" timestamp="1600271545532">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="98" y="262" key="MultipleFileMergeDialog/0.23.1440.838@0.23.1440.838" timestamp="1600271545532" />
-    <state x="59" y="38" key="SettingsEditor" timestamp="1600361013524">
+    <state x="372" y="169" key="RollbackChangesDialog" timestamp="1601379436374">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="59" y="38" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1600361013524" />
+    <state x="372" y="169" key="RollbackChangesDialog/0.23.1440.838@0.23.1440.838" timestamp="1601379436374" />
+    <state x="59" y="38" key="SettingsEditor" timestamp="1601654416803">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="59" y="38" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1601654416803" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1600352325046" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1596535318792" />
     <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600361305346">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="110" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.838@0.23.1440.838" timestamp="1600361305346" />
+    <state x="645" y="197" width="604" height="490" key="find.popup" timestamp="1601380940980">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="645" y="197" width="604" height="490" key="find.popup/0.23.1440.838@0.23.1440.838" timestamp="1601380940980" />
+    <state x="391" y="162" key="git4idea.branch.GitSmartOperationDialog" timestamp="1601379616481">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="391" y="162" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.838@0.23.1440.838" timestamp="1601379616481" />
+    <state x="367" y="348" key="git4idea.ui.GitStashDialog" timestamp="1601379519424">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="367" y="348" key="git4idea.ui.GitStashDialog/0.23.1440.838@0.23.1440.838" timestamp="1601379519424" />
     <state x="580" y="421" key="jetbrains.nodejs.interpreters-dialog" timestamp="1600360241262">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="580" y="421" key="jetbrains.nodejs.interpreters-dialog/0.23.1440.838@0.23.1440.838" timestamp="1600360241262" />
-    <state x="456" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1600264281230">
-      <screen x="0" y="23" width="1440" height="838" />
+    <state x="456" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1601893708474">
+      <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="456" y="186" width="670" height="676" key="search.everywhere.popup/0.23.1440.838@0.23.1440.838" timestamp="1600264281230" />
-    <state x="456" y="186" width="670" height="676" key="search.everywhere.popup/0.23.1440.839@0.23.1440.839" timestamp="1595065164184" />
+    <state x="456" y="186" width="670" height="676" key="search.everywhere.popup/0.23.1440.838@0.23.1440.838" timestamp="1601721006444" />
+    <state x="456" y="186" width="670" height="676" key="search.everywhere.popup/0.23.1440.839@0.23.1440.839" timestamp="1601893708474" />
     <state x="456" y="186" width="670" height="677" key="search.everywhere.popup/0.23.1440.840@0.23.1440.840" timestamp="1596535185037" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="dart-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

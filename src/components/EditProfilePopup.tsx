@@ -3,12 +3,12 @@ import PopupWithForm from './PopupWithForm';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import { reducerForForm } from '../utils/formHelper';
 import SubmitButton from './ui/SubmitButton';
+import {FormInterface} from "../interfaces/FormInterface";
+import {Action, ActionInterface} from "../interfaces/Action";
+import {EditProfileProps} from "../interfaces/props/EditProfileProps";
 
-/**
- * initial state of form elements
- * @type {{inputValidities: {nameValidity: boolean, aboutValidity: boolean}, inputErrors: {nameError: string, aboutError: string}, formValid: boolean, inputValues: {name: string, about: string}}}
- */
-const initialFormValueState = {
+
+const initialFormValueState:FormInterface = {
   inputValues: {
     name: '',
     about: '',
@@ -21,7 +21,7 @@ const initialFormValueState = {
     nameError: '',
     aboutError: '',
   },
-  formValid: false,
+  formValidity: false,
 };
 
 /**
@@ -30,7 +30,7 @@ const initialFormValueState = {
  * @param action
  * @returns {function} handler for reducer
  */
-function reducerForEditProfileForms(state, action) {
+function reducerForEditProfileForms(state:FormInterface, action:ActionInterface) {
   /**
      * setting initial values from context
      */
@@ -49,7 +49,7 @@ function reducerForEditProfileForms(state, action) {
  */
 function EditProfilePopup({
   isOpen, onClose, onUpdateUser, isSubmitting,
-}) {
+}:EditProfileProps){
   /**
      * current user context
      * @type {object}
@@ -59,28 +59,28 @@ function EditProfilePopup({
   /**
      * reducer hook for form elements
      */
-  const [formState, dispatchForm] = React.useReducer(reducerForEditProfileForms, initialFormValueState);
+  const [formState, dispatchForm] = React.useReducer<React.Reducer<FormInterface, ActionInterface>>(reducerForEditProfileForms, initialFormValueState );
 
   /**
      * destructured values for form elements
      */
   const { nameValidity, aboutValidity } = formState.inputValidities;
   const { nameError, aboutError } = formState.inputErrors;
-  const { name, about } = formState.inputValues;
-  const buttonState = formState.formValid;
+  const { name = '', about = '' } = formState.inputValues;
+  const buttonState = formState.formValidity;
 
   /**
      * submit handler
      * @param e
      */
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     onUpdateUser({
       name,
       about,
     });
     dispatchForm({
-      type: 'RESET',
+      type: Action.RESET,
     });
   };
 
@@ -88,14 +88,15 @@ function EditProfilePopup({
      * change input handler
      * @param e
      */
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>):void => {
+    e.persist();
     /**
          * dispatching form with a certain action type
          */
     dispatchForm({
-      type: 'DISPATCH',
+      type: Action.DISPATCH,
       field: e.target.name,
-      value: e.target,
+      value: e,
       currentUser: currentUserValue,
     });
   };
@@ -107,7 +108,7 @@ function EditProfilePopup({
          * reseting form with a certain action type
          */
     dispatchForm({
-      type: 'RESET',
+      type: Action.RESET,
       currentUser: currentUserValue,
     });
   }, [isOpen, currentUserValue]);
@@ -120,6 +121,7 @@ function EditProfilePopup({
       onClose={onClose}
       onSubmit={handleSubmit}
     >
+      <>
       <label className="popup__form-label">
         <input
           className={`popup__input ${nameValidity ? null : 'popup__input_type_error'}`}
@@ -127,11 +129,11 @@ function EditProfilePopup({
           name="name"
           type="text"
           placeholder="ФИО"
-          minLength="2"
-          maxLength="20"
+          minLength={2}
+          maxLength={20}
           pattern="[a-zA-ZА-ЯЁа-яё\s\-]+"
           required
-          value={name}
+          value={name as string}
           onChange={(e) => {
             handleChange(e);
           }}
@@ -145,10 +147,10 @@ function EditProfilePopup({
           name="about"
           type="text"
           placeholder="Профессия"
-          minLength="2"
-          maxLength="200"
+          minLength={2}
+          maxLength={200}
           pattern="^[^\s\-].+[^\s']$"
-          value={about}
+          value={about as string}
           onChange={(e) => {
             handleChange(e);
           }}
@@ -156,7 +158,8 @@ function EditProfilePopup({
         />
         <span className="popup__input-error" id="input-subtitle-error">{aboutError}</span>
       </label>
-      <SubmitButton renderSubmitAnimation={isSubmitting} isDisabled={buttonState} buttonTitle="Сохранить" />
+      <SubmitButton renderSubmitAnimation={isSubmitting} isDisabled={buttonState} buttonTitle="Сохранить" name="" />
+      </>
     </PopupWithForm>
   );
 }

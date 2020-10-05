@@ -11,5 +11,24 @@
 }
 
 .card__like-counter_animation {
-    animation: slide-in-top 0.5s linear both;
+    animation: slide-in-top 500s linear both;
 }
+
+/*.card__like-counter_animation-enter {*/
+/*    transform: translateY(-120%);*/
+/*    opacity: 0;*/
+/*}*/
+/*.card__like-counter_animation-enter-active{*/
+/*    transform: translateY(0);*/
+/*    opacity: 1;*/
+/*    transition: all ease-in-out s;*/
+/*    color:blue;*/
+/*}*/
+
+
+/*.card__like-counter_animation-exit {*/
+/*    opacity: 1;*/
+/*}*/
+/*.card__like-counter_animation-exit {*/
+/*    opacity: 0;*/
+/*}*/

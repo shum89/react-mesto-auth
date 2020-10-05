@@ -8,6 +8,7 @@
           "_id", "_url"
         ]
       }
-    ]
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
-}
+  }

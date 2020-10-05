@@ -1,4 +1,5 @@
 import React from 'react';
+import {BurgerProps} from "../interfaces/props/BurgerProps";
 
 /**
  * burger for mobile menu
@@ -7,7 +8,7 @@ import React from 'react';
  * @return {JSX.Element}
  * @constructor
  */
-function Burger({ onMobileMenu, isMobileMenuOpened }) {
+function Burger({ onMobileMenu, isMobileMenuOpened }:BurgerProps) {
   return (
     <button className="burger" type="button" onClick={onMobileMenu}>
       <span className={`burger__dash ${isMobileMenuOpened ? 'burger__dash_active' : null}`} />

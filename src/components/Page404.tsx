@@ -39,7 +39,6 @@ function Page404() {
         <Link to="/" className="page404__button">Вернуться на Mesto</Link>
         <button className="page404__button" onClick={randomGifRequest}>Позалипать на собачек</button>
       </div>
-
     </div>
   );
 }

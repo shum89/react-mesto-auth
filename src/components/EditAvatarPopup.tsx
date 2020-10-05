@@ -1,6 +1,7 @@
 import React from 'react';
 import PopupWithForm from './PopupWithForm';
 import SubmitButton from './ui/SubmitButton';
+import {EditAvatarProps} from "../interfaces/props/EditAvatarProps";
 
 /**
  * @param {object} props
@@ -12,12 +13,11 @@ import SubmitButton from './ui/SubmitButton';
  */
 function EditAvatarPopup({
   isOpen, onClose, onUpdateAvatar, isSubmitting,
-}) {
+}:EditAvatarProps) {
   /**
      * ref for avatar input
-     * @type {React.MutableRefObject<undefined>}
      */
-  const avatarInput = React.useRef();
+  const avatarInput = React.useRef<HTMLInputElement>(null!);
   /**
      * avatar input form state
      */
@@ -29,12 +29,12 @@ function EditAvatarPopup({
      * submit handler
      * @param e
      */
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onUpdateAvatar({
       avatar: avatarInput.current.value,
     });
-    e.target.reset();
+    e.currentTarget.reset();
   };
 
   /**
@@ -61,15 +61,13 @@ function EditAvatarPopup({
     <PopupWithForm
       name="edit-avatar"
       title="Обновить Аватар"
-      buttonTitle="Сохранить"
       isOpen={isOpen}
       onClose={onClose}
-      onSubmit={(e) => {
+      onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
         handleSubmit(e);
       }}
-      renderSubmitAnimation={isSubmitting}
-      isDisabled={isDisabled}
     >
+      <>
       <label className="popup__form-label">
         <input
           ref={avatarInput}
@@ -86,7 +84,7 @@ function EditAvatarPopup({
         <span className="popup__input-error" id="input-title-error">{avatarErrorMessage}</span>
       </label>
       <SubmitButton renderSubmitAnimation={isSubmitting} isDisabled={isDisabled} buttonTitle="Cохранить" />
-
+        </>
     </PopupWithForm>
   );
 }

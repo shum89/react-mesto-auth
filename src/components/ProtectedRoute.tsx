@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import {Redirect, Route} from 'react-router-dom';
+import {ProtectedRouteProps} from "../interfaces/props/ProtectedRouteProps";
 
 /**
  * HOC for route if user is not logged in
@@ -8,7 +9,7 @@ import { Route, Redirect } from 'react-router-dom';
  * @return {JSX.Element}
  * @constructor
  */
-const ProtectedRoute = ({ component: Component, ...props }) => (
+const ProtectedRoute = ({ component: Component, ...props }:ProtectedRouteProps) => (
   <Route>
     {
                 () => (props.loggedIn ? <Component {...props} /> : <Redirect to="./sign-in" />)

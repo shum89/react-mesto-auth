@@ -1,5 +1,8 @@
 import React from 'react';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
+import {CardProps} from "../interfaces/props/CardProps";
+import {CurrentUserInterface} from "../interfaces/CurrentUserInterface";
+
 
 /**
  * card component
@@ -11,7 +14,7 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext';
  */
 function Card({
   onCardClick, onCardLike, onCardDelete, card,
-}) {
+}:CardProps) {
   /**
      * destructured card prop
      */
@@ -22,17 +25,12 @@ function Card({
      * @type {object}
      */
 
-  const currentUser = React.useContext(CurrentUserContext);
+  const currentUser:CurrentUserInterface = React.useContext(CurrentUserContext);
   /**
      * checks if card owner id corresponds with user id
      * @type {boolean}
      */
   const isOwn = card.owner._id === currentUser._id;
-
-  /**
-     * state for an like counter animation
-     */
-  const [counterAnimation, setCounterAnimation] = React.useState(false);
 
   /**
      * class for a delete button
@@ -58,7 +56,7 @@ function Card({
      * card like counter class
      * @type {string}
      */
-  const likeCounterClass = (`card__like-counter ${counterAnimation ? 'card__like-counter_animation' : null}`);
+  const likeCounterClass = ('card__like-counter');
 
   /**
      * @method handleCardClick
@@ -72,10 +70,9 @@ function Card({
      * @method handleLikeClick
      * @description handles click on like and sets and removes counter animation
      */
-  const handleLikeClick = () => {
-    setCounterAnimation(true);
+  const handleLikeClick = React.useCallback(() => {
     onCardLike(card);
-  };
+  },[]);
 
   /**
      * @method handleDeleteCard
@@ -93,11 +90,11 @@ function Card({
         src={link}
         onClick={handleCardClick}
       />
-      <button className={cardDeleteButtonClassName} onClick={handleDeleteCard} />
+      <button aria-label="delete card" type="button" className={cardDeleteButtonClassName} onClick={handleDeleteCard} />
       <div className="card__info-container">
-        <h2 className="card__title">{name}</h2>
+        <h2 className="card__title">{`${name} + ${Math.random()}`}</h2>
         <div className="card__like-container">
-          <button className={cardLikeButtonClass} onClick={handleLikeClick} type="button" />
+          <button aria-label="like card" className={cardLikeButtonClass} onClick={handleLikeClick} type="button" />
           <p className={likeCounterClass}>{likes.length}</p>
         </div>
       </div>

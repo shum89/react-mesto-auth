@@ -1,6 +1,7 @@
 import React from 'react';
 import success from '../images/success.svg';
 import fail from '../images/fail.svg';
+import {InfoTooltipProps} from "../interfaces/props/InfoTooltipProps";
 
 /**
  * Info tooltip popup that shows whether request to login or register was successful
@@ -13,7 +14,7 @@ import fail from '../images/fail.svg';
  */
 function InfoTooltip({
   name, message, onClose, isOpen,
-}) {
+}:InfoTooltipProps) {
   return (
     <div className={`popup popup_type_${name} ${isOpen ? 'popup_opened' : null}`}>
       <div className="popup__container">

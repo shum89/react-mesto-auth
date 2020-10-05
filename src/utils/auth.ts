@@ -1,6 +1,6 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL:string = 'https://auth.nomoreparties.co';
 
-const fetchData = (baseURL, path, params) => fetch(`${baseURL}${path}`, params).then((res) => {
+const fetchData = (baseURL:string, path:string, params: RequestInit | undefined) => fetch(`${baseURL}${path}`, params).then((res) => {
   if (res.ok) {
     return res.json();
   }
@@ -8,7 +8,7 @@ const fetchData = (baseURL, path, params) => fetch(`${baseURL}${path}`, params).
     .then((data) => Promise.reject(new Error(`Ошибка: ${res.status}: ${data.message}`)));
 });
 
-export const register = (email, password) => fetchData(`${BASE_URL}`, '/signup', {
+export const register = (email:string, password:string) => fetchData(`${BASE_URL}`, '/signup', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ export const register = (email, password) => fetchData(`${BASE_URL}`, '/signup',
   body: JSON.stringify({ email, password }),
 }).catch((err) => console.log(err));
 
-export const authorize = (email, password) => fetchData(`${BASE_URL}`, '/signin', {
+export const authorize = (email:string, password:string) => fetchData(`${BASE_URL}`, '/signin', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export const authorize = (email, password) => fetchData(`${BASE_URL}`, '/signin'
   }
 }).catch((err) => console.log(err));
 
-export const checkToken = (token) => fetchData(`${BASE_URL}`, '/users/me', {
+export const checkToken = (token: string) => fetchData(`${BASE_URL}`, '/users/me', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',

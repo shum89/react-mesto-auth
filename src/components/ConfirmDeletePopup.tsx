@@ -1,6 +1,7 @@
 import React from 'react';
 import PopupWithForm from './PopupWithForm';
 import SubmitButton from './ui/SubmitButton';
+import {ConfirmDeleteProps} from "../interfaces/props/ConfirmDeleteProps";
 
 /**
  * modal window for card delete
@@ -15,10 +16,12 @@ import SubmitButton from './ui/SubmitButton';
 
 function ConfirmDeletePopup({
   isOpen, onClose, onDeleteSubmit, card, isSubmitting,
-}) {
-  const handleDeleteSubmit = (e) => {
+}:ConfirmDeleteProps) {
+  const handleDeleteSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onDeleteSubmit(card);
+    if (card) {
+      onDeleteSubmit(card);
+    }
   };
 
   return (

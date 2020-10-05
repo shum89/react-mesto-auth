@@ -1,4 +1,5 @@
 import React from 'react';
+import {ImagePopupProps} from "../interfaces/props/ImagePopupProps";
 
 /**
  * popup with image component
@@ -7,12 +8,8 @@ import React from 'react';
  * @param {function} props.onClose  - handler for closing popup
  * @return {JSX.Element}
  */
-function ImagePopup(props) {
-  const {
-    card,
-    card: { link, name } = { link: '', name: '' },
-    onClose,
-  } = props;
+function ImagePopup({onClose, card}:ImagePopupProps) {
+    const {link, name} = card ?? {link: '', name:''};
   return (
     <div className={`popup popup_type_image ${card ? 'popup_opened' : null}`}>
       <figure className="popup__image-container">

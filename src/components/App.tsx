@@ -20,6 +20,12 @@ import Login from './Login';
 import Register from './Register';
 import * as auth from '../utils/auth';
 import InfoTooltip from './InfoTooltip';
+import {CurrentUserInterface} from "../interfaces/CurrentUserInterface";
+import {CardInterface} from "../interfaces/CardInterface";
+import {UserUpdate} from "../interfaces/props/EditProfileProps";
+import {EditAvatar} from "../interfaces/props/EditAvatarProps";
+import {AddPlaceUpdate} from "../interfaces/props/AddPlaceProps";
+import {InputValuesInterface} from "../interfaces/FormInterface";
 
 /**
  * Create an app from the components
@@ -45,16 +51,22 @@ function App() {
   const [isMobileMenuOpen, setMobileMenu] = React.useState(false);
   /**
      * Current User State
-     * @param login {object}
+     *
      */
-  const [currentUser, setUserInfo] = React.useState({
-    login: {
+  const [currentUser, setUserInfo] = React.useState<CurrentUserInterface>({
+    name: '',
+    about: '',
+    avatar: '',
+    _id: '',
+    login:{
+      email:'',
+      _id:'',
     },
   });
     /**
      * Cards state
      */
-  const [cards, setCards] = React.useState([]);
+  const [cards, setCards] = React.useState<Array<CardInterface>>([]);
 
   /**
 State for waiting while loading data
@@ -73,8 +85,8 @@ State for waiting while loading data
   /**
      * Popup with image state
      */
-  const [selectedCard, setSelectedCardPopup] = React.useState(undefined);
-  const [selectedDeleteCard, setSelectedCard] = React.useState(undefined);
+  const [selectedCard, setSelectedCardPopup] = React.useState<CardInterface | null>(null);
+  const [selectedDeleteCard, setSelectedCard] = React.useState<CardInterface | null>(null);
 
   /**
      * closes all popups
@@ -83,7 +95,7 @@ State for waiting while loading data
     setAddPlacePopup(false);
     setEditAvatarPopup(false);
     setEditProfilePopup(false);
-    setSelectedCardPopup(undefined);
+    setSelectedCardPopup(null);
     setDeletePopup(false);
     setTooltipPopup(false);
   };
@@ -121,7 +133,7 @@ State for waiting while loading data
      *  handles user click on a card
      * @param {Object} card - card object that corresponds to a card that user clicked on
      */
-  const handleCardClick = (card) => {
+  const handleCardClick = (card:CardInterface) => {
     setSelectedCardPopup(card);
   };
     /**
@@ -135,7 +147,7 @@ State for waiting while loading data
      */
   const handleEditProfileClick = () => {
     setEditProfilePopup(true);
-    console.log(currentUser);
+
   };
 
   /**
@@ -145,7 +157,7 @@ State for waiting while loading data
     setAddPlacePopup(true);
   };
 
-  const handleDeletePopupClick = (card) => {
+  const handleDeletePopupClick = (card:CardInterface) => {
     setDeletePopup(true);
     setSelectedCard(card);
   };
@@ -161,17 +173,18 @@ State for waiting while loading data
      * update user info
      * @param data {object}
      */
-  const handleUpdateUser = (data) => {
+  const handleUpdateUser = (data:UserUpdate) => {
     setSubmiting(true);
     api.updateUserInfo(data).then((result) => {
       setUserInfo((prevState) => {
         const newUser = { ...prevState, ...result };
         return newUser;
       });
-      closeAllPopups();
-      setSubmiting(false);
     }).catch((err) => {
       console.log(err);
+    }).finally(() => {
+      closeAllPopups();
+      setSubmiting(false);
     });
   };
 
@@ -179,17 +192,21 @@ State for waiting while loading data
      * update user avatar
      * @param data {object}
      */
-  const handleUpdateAvatar = (data) => {
+  const handleUpdateAvatar = (data:EditAvatar) => {
     setSubmiting(true);
     api.updateUserAvatar(data).then((result) => {
       setUserInfo((prevState) => {
         const newUser = { ...prevState, ...result };
         return newUser;
       });
-      closeAllPopups();
-      setSubmiting(false);
     }).catch((err) => {
       console.log(err);
+      setTooltipPopup(true);
+      setTooltipMessage('Что-то пошло не так!\n'
+          + 'Попробуйте ещё раз.');
+    }).finally(() => {
+      setEditAvatarPopup(false);
+      setSubmiting(false);
     });
   };
 
@@ -197,30 +214,36 @@ State for waiting while loading data
      * handle card likes
      * @param card {object}
      */
-  const handleCardLike = (card) => {
+  const handleCardLike = (card:CardInterface) => {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     api.setLike(card._id, isLiked).then((newCard) => {
-      const newCards = cards.map((c) => (c._id === card._id ? newCard : c));
-      setCards(newCards);
+        const newCards = cards.map((c) => (c?._id === card._id ? newCard : c));
+        setCards(newCards);
+
     }).catch((err) => {
       console.log(err);
-    });
-  };
-
+    })
+  }
   /**
      * handle card delete
      * @param card {object}
      */
 
-  const handleDeleteCard = (card) => {
+  const handleDeleteCard = (card:CardInterface) => {
     setSubmiting(true);
-    api.deleteCard(card._id).then(() => {
-      const newCards = cards.filter((i) => i._id !== card._id);
-      setCards(newCards);
-      closeAllPopups();
-      setSubmiting(false);
+    api.deleteCard(card!._id).then(() => {
+      if (cards !== null){
+        const newCards = cards.filter((i) => i?._id !== card!._id);
+        setCards(newCards);
+      }
     }).catch((err) => {
+      setTooltipPopup(true);
+      setTooltipMessage('Что-то пошло не так!\n'
+          + 'Попробуйте ещё раз.');
       console.log(err);
+    }).finally(() => {
+      setSubmiting(false);
+      setDeletePopup(false);
     });
   };
 
@@ -228,16 +251,21 @@ State for waiting while loading data
      * handle add card
      * @param data {object}
      */
-  const handleAddPlaceSubmit = (data) => {
+  const handleAddPlaceSubmit = (data:AddPlaceUpdate) => {
     setSubmiting(true);
-    api.postNewCard(data).then((newCard) => {
+    api.postNewCard(data).then((newCard:CardInterface) => {
       setCards([newCard, ...cards]);
-      closeAllPopups();
     }).catch((err) => {
       console.log(err);
-    }).finally(() => setSubmiting(false));
+      setTooltipPopup(true);
+      setTooltipMessage('Что-то пошло не так!\n'
+          + 'Попробуйте ещё раз.');
+    }).finally(() => {
+      setSubmiting(false);
+      setAddPlacePopup(false);
+    });
   };
-  const handleRegister = ({ email, password }) => {
+  const handleRegister = ({ email, password }:InputValuesInterface) => {
     setSubmiting(true);
     auth.register(email, password).then((res) => {
       setTooltipPopup(true);
@@ -255,7 +283,7 @@ State for waiting while loading data
      * @param email {string}
      * @param password  {string}
      */
-  const handleLogin = ({ email, password }) => {
+  const handleLogin = ({ email, password }:InputValuesInterface) => {
     setSubmiting(true);
     auth.authorize(email, password).then((data) => {
       if (data) {
@@ -311,6 +339,9 @@ State for waiting while loading data
         });
         setCards(initialCards);
       }).catch((err) => {
+        setTooltipPopup(true);
+        setTooltipMessage('Что-то пошло не так!\n'
+            + 'Попробуйте ещё раз.');
         console.log(err);
       }).finally(() => {
         setLoading(false);
@@ -341,14 +372,13 @@ State for waiting while loading data
           <ProtectedRoute
             path="/"
             component={() => (isLoading ? <Spinner />
-              : (
-                <Main
+              :
+                (<Main
                   onAddPlace={handleAddPlaceClick}
                   onEditProfile={handleEditProfileClick}
                   onEditAvatar={handleEditAvatarClick}
                   cardClick={handleCardClick}
                   cards={cards}
-                  onCardDelete={handleDeleteCard}
                   onCardLike={handleCardLike}
                   onDeletePopup={handleDeletePopupClick}
                 />
@@ -361,7 +391,7 @@ State for waiting while loading data
           </Route>
         </Switch>
         <Footer />
-        {!loggedIn && (
+        { (
           <InfoTooltip
             name="info-tooltip"
             message={tooltipMessage}

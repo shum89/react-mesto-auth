@@ -5,7 +5,8 @@ import { giphyUrl } from './constants';
  * @param {string} baseUrl
  */
 class GiphyApi {
-  constructor({ baseUrl }) {
+  private _url: string;
+  constructor(baseUrl :string) {
     this._url = baseUrl;
   }
 
@@ -23,6 +24,6 @@ class GiphyApi {
   }
 }
 
-export const giphy = new GiphyApi({
-  baseUrl: giphyUrl,
-});
+export const giphy = new GiphyApi(
+  giphyUrl,
+);
