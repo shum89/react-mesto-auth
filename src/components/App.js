@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import {
-  withRouter, Route, Switch, useHistory,
+  withRouter, Route, Switch, useHistory, Redirect,
 } from 'react-router-dom';
 import '../index.css';
 import Header from './Header';
@@ -11,7 +11,6 @@ import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import ConfirmDeletePopup from './ConfirmDeletePopup';
-import Spinner from './Spinner';
 import Page404 from './Page404';
 import { api } from '../utils/Api';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
@@ -135,7 +134,6 @@ State for waiting while loading data
      */
   const handleEditProfileClick = () => {
     setEditProfilePopup(true);
-    console.log(currentUser);
   };
 
   /**
@@ -195,7 +193,10 @@ State for waiting while loading data
 
   /**
      * handle card likes
-     * @param card {object}
+     * @param card {{
+   *     _id: string,
+   *     likes: Array,
+   * }}
      */
   const handleCardLike = (card) => {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
@@ -209,7 +210,10 @@ State for waiting while loading data
 
   /**
      * handle card delete
-     * @param card {object}
+     ** @param card {{
+   *     _id: string,
+   *     likes: Array,
+   * }}
      */
 
   const handleDeleteCard = (card) => {
@@ -226,7 +230,10 @@ State for waiting while loading data
 
   /**
      * handle add card
-     * @param data {object}
+     * @param data {{
+   *     name:string,
+   *     link: string,
+   * }}
      */
   const handleAddPlaceSubmit = (data) => {
     setSubmiting(true);
@@ -261,6 +268,8 @@ State for waiting while loading data
       if (data) {
         history.push('/');
         setLoggedIn(true);
+        setTooltipPopup(true);
+        setTooltipMessage('Вы успешно вошли в приложение!\'');
       } else {
         setTooltipPopup(true);
         setTooltipMessage('Что-то пошло не так!\n'
@@ -276,16 +285,15 @@ State for waiting while loading data
     setMobileMenu(false);
     localStorage.removeItem('token');
   };
-
   /**
      * Set current user values and initial cards
      */
+  const token = localStorage.getItem('token');
   React.useEffect(() => {
     /**
          * handle token check
          */
     const handleTokenCheck = () => {
-      const token = localStorage.getItem('token');
       if (token) {
         auth.checkToken(token).then((data) => {
           setUserInfo((prevState) => {
@@ -298,7 +306,6 @@ State for waiting while loading data
       }
     };
     handleTokenCheck();
-
     /**
          * if user loggedIn load cards and user info
          */
@@ -311,12 +318,14 @@ State for waiting while loading data
         });
         setCards(initialCards);
       }).catch((err) => {
+        setTooltipPopup(true);
+        setTooltipMessage('Что-то пошло не так!\n');
         console.log(err);
       }).finally(() => {
         setLoading(false);
       });
     }
-  }, [loggedIn, history]);
+  }, [loggedIn, history, token]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -328,84 +337,82 @@ State for waiting while loading data
           onMobileMenu={handleMobileMenu}
         />
         <Switch>
-          {!loggedIn && (
-            <Route path="/sign-in">
-              <Login isSubmitting={isSubmitting} onLogin={handleLogin} />
-            </Route>
-          ) }
-          {!loggedIn && (
-            <Route path="/sign-up">
-              <Register isSubmitting={isSubmitting} onRegister={handleRegister} />
-            </Route>
-          ) }
+          (
+          <Route path="/sign-in">
+            <Login isSubmitting={isSubmitting} onLogin={handleLogin} />
+          </Route>
+          )
+          (
+          <Route path="/sign-up">
+            <Register isSubmitting={isSubmitting} onRegister={handleRegister} />
+          </Route>
+          )
           <ProtectedRoute
             path="/"
-            component={() => (isLoading ? <Spinner />
-              : (
-                <Main
-                  onAddPlace={handleAddPlaceClick}
-                  onEditProfile={handleEditProfileClick}
-                  onEditAvatar={handleEditAvatarClick}
-                  cardClick={handleCardClick}
-                  cards={cards}
-                  onCardDelete={handleDeleteCard}
-                  onCardLike={handleCardLike}
-                  onDeletePopup={handleDeletePopupClick}
-                />
-              ))}
+            component={Main}
+            onAddPlace={handleAddPlaceClick}
+            onEditProfile={handleEditProfileClick}
+            onEditAvatar={handleEditAvatarClick}
+            cardClick={handleCardClick}
+            cards={cards}
+            onCardDelete={handleDeleteCard}
+            onCardLike={handleCardLike}
+            onDeletePopup={handleDeletePopupClick}
+            isLoading={isLoading}
             loggedIn={loggedIn}
+            isAnimationSet={isMobileMenuOpen}
           />
-
+          <Route>
+            {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-in" />}
+          </Route>
           <Route path="*">
             <Page404 />
           </Route>
         </Switch>
         <Footer />
-        {!loggedIn && (
-          <InfoTooltip
-            name="info-tooltip"
-            message={tooltipMessage}
-            isOpen={isTooltipOpen}
+
+        <InfoTooltip
+          name="info-tooltip"
+          message={tooltipMessage}
+          isOpen={isTooltipOpen}
+          onClose={closeAllPopups}
+        />
+
+        <>
+          <ConfirmDeletePopup
+            isOpen={isDeletePopupOpen}
+            onClose={closeAllPopups}
+            onDeleteSubmit={handleDeleteCard}
+            card={selectedDeleteCard}
+            isSubmitting={isSubmitting}
+          />
+
+          <EditProfilePopup
+            isOpen={isEditProfileOpen}
+            onClose={closeAllPopups}
+            onUpdateUser={handleUpdateUser}
+            isSubmitting={isSubmitting}
+          />
+
+          <EditAvatarPopup
+            isOpen={isEditAvatarPopupOpen}
+            onClose={closeAllPopups}
+            onUpdateAvatar={handleUpdateAvatar}
+            isSubmitting={isSubmitting}
+          />
+
+          <AddPlacePopup
+            isOpen={isAddPlacePopupOpen}
+            onClose={closeAllPopups}
+            onAddPlace={handleAddPlaceSubmit}
+            isSubmitting={isSubmitting}
+          />
+
+          <ImagePopup
+            card={selectedCard}
             onClose={closeAllPopups}
           />
-        )}
-        {loggedIn && (
-          <>
-            <ConfirmDeletePopup
-              isOpen={isDeletePopupOpen}
-              onClose={closeAllPopups}
-              onDeleteSubmit={handleDeleteCard}
-              card={selectedDeleteCard}
-              isSubmitting={isSubmitting}
-            />
-
-            <EditProfilePopup
-              isOpen={isEditProfileOpen}
-              onClose={closeAllPopups}
-              onUpdateUser={handleUpdateUser}
-              isSubmitting={isSubmitting}
-            />
-
-            <EditAvatarPopup
-              isOpen={isEditAvatarPopupOpen}
-              onClose={closeAllPopups}
-              onUpdateAvatar={handleUpdateAvatar}
-              isSubmitting={isSubmitting}
-            />
-
-            <AddPlacePopup
-              isOpen={isAddPlacePopupOpen}
-              onClose={closeAllPopups}
-              onAddPlace={handleAddPlaceSubmit}
-              isSubmitting={isSubmitting}
-            />
-
-            <ImagePopup
-              card={selectedCard}
-              onClose={closeAllPopups}
-            />
-          </>
-        )}
+        </>
       </div>
     </CurrentUserContext.Provider>
   );

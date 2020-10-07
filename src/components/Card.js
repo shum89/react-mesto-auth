@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 /**
@@ -32,7 +33,6 @@ function Card({
   /**
      * state for an like counter animation
      */
-  const [counterAnimation, setCounterAnimation] = React.useState(false);
 
   /**
      * class for a delete button
@@ -58,7 +58,7 @@ function Card({
      * card like counter class
      * @type {string}
      */
-  const likeCounterClass = (`card__like-counter ${counterAnimation ? 'card__like-counter_animation' : null}`);
+  const likeCounterClass = ('card__like-counter');
 
   /**
      * @method handleCardClick
@@ -72,20 +72,25 @@ function Card({
      * @method handleLikeClick
      * @description handles click on like and sets and removes counter animation
      */
+  const [animationLike, setAnimation] = React.useState(false);
   const handleLikeClick = () => {
-    setCounterAnimation(true);
     onCardLike(card);
+    setAnimation(!animationLike);
   };
 
   /**
      * @method handleDeleteCard
      * @description handles card delete
      */
+
   const handleDeleteCard = () => {
     onCardDelete(card);
   };
 
+  const nodeRef = React.useRef(null);
+
   return (
+
     <li className="card">
       <img
         className="card__photo"
@@ -93,15 +98,23 @@ function Card({
         src={link}
         onClick={handleCardClick}
       />
-      <button className={cardDeleteButtonClassName} onClick={handleDeleteCard} />
+      <button aria-label="delete card" type="button" className={cardDeleteButtonClassName} onClick={handleDeleteCard} />
       <div className="card__info-container">
         <h2 className="card__title">{name}</h2>
         <div className="card__like-container">
-          <button className={cardLikeButtonClass} onClick={handleLikeClick} type="button" />
-          <p className={likeCounterClass}>{likes.length}</p>
+          <button aria-label="like card" type="button" className={cardLikeButtonClass} onClick={handleLikeClick} />
+          <CSSTransition
+            nodeRef={nodeRef}
+            timeout={500}
+            in={animationLike}
+            classNames="card__like-counter_animation"
+          >
+            <p ref={nodeRef} className={likeCounterClass}>{likes.length}</p>
+          </CSSTransition>
         </div>
       </div>
     </li>
+
   );
 }
 

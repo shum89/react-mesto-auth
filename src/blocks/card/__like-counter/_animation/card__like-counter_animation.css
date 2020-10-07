@@ -10,6 +10,11 @@
     }
 }
 
-.card__like-counter_animation {
-    animation: slide-in-top 0.5s linear both;
+.card__like-counter_animation-enter {
+    animation: slide-in-top 0.4s linear both;
 }
+
+.card__like-counter_animation-exit {
+    animation: slide-in-top 0.4s linear both;
+}
+

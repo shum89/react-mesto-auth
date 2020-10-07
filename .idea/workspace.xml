@@ -1,36 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:mesto" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:mesto-react" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="hotfix: fix HOC">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/card/__like-counter/_animation/card__like-counter_animation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__like-counter/_animation/card__like-counter_animation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="refactor/typescript" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
@@ -83,13 +70,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/images" />
-      <recent name="$PROJECT_DIR$/src/utils" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/ui" />
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/utils" />
     </key>
   </component>
@@ -120,6 +107,10 @@
       <workItem from="1600074221029" duration="11301000" />
       <workItem from="1600243308858" duration="22378000" />
       <workItem from="1600335690410" duration="7550000" />
+      <workItem from="1601925440720" duration="445000" />
+      <workItem from="1601926108467" duration="622000" />
+      <workItem from="1601926909721" duration="18353000" />
+      <workItem from="1602080120299" duration="3736000" />
     </task>
     <task id="LOCAL-00001" summary="feture: can close popup with Esc button">
       <created>1597076269556</created>
@@ -218,7 +209,9 @@
     <MESSAGE value="hotfix: fixed react transition group warning" />
     <MESSAGE value="hotfix: fixed transition animation" />
     <MESSAGE value="refactor: linter and form hook" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: linter and form hook" />
+    <MESSAGE value="refactor: add typescript" />
+    <MESSAGE value="hotfix: fix HOC" />
+    <option name="LAST_COMMIT_MESSAGE" value="hotfix: fix HOC" />
   </component>
   <component name="WindowStateProjectService">
     <state x="600" y="351" key="#ESLint" timestamp="1600360243354">
@@ -243,6 +236,10 @@
     </state>
     <state x="408" y="209" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.838@0.23.1440.838" timestamp="1600243356064" />
     <state x="408" y="209" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.840@0.23.1440.840" timestamp="1596024518123" />
+    <state x="100" y="212" width="1240" height="638" key="DiffContextDialog" timestamp="1602004051545">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="100" y="212" width="1240" height="638" key="DiffContextDialog/0.23.1440.838@0.23.1440.838" timestamp="1602004051545" />
     <state x="540" y="201" key="FileChooserDialogImpl" timestamp="1600360239647">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
