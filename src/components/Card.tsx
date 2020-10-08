@@ -2,6 +2,7 @@ import React from 'react';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import {CardProps} from "../interfaces/props/CardProps";
 import {CurrentUserInterface} from "../interfaces/CurrentUserInterface";
+import {CSSTransition} from "react-transition-group";
 
 
 /**
@@ -70,9 +71,11 @@ function Card({
      * @method handleLikeClick
      * @description handles click on like and sets and removes counter animation
      */
-  const handleLikeClick = React.useCallback(() => {
+  const [animationLike, setLikeAnimation] = React.useState(false)
+  const handleLikeClick = () => {
     onCardLike(card);
-  },[]);
+    setLikeAnimation(!animationLike)
+  }
 
   /**
      * @method handleDeleteCard
@@ -81,6 +84,7 @@ function Card({
   const handleDeleteCard = () => {
     onCardDelete(card);
   };
+  const nodeRef = React.useRef(null);
 
   return (
     <li className="card">
@@ -92,10 +96,17 @@ function Card({
       />
       <button aria-label="delete card" type="button" className={cardDeleteButtonClassName} onClick={handleDeleteCard} />
       <div className="card__info-container">
-        <h2 className="card__title">{`${name} + ${Math.random()}`}</h2>
+        <h2 className="card__title">{name}</h2>
         <div className="card__like-container">
           <button aria-label="like card" className={cardLikeButtonClass} onClick={handleLikeClick} type="button" />
-          <p className={likeCounterClass}>{likes.length}</p>
+          <CSSTransition
+              nodeRef={nodeRef}
+              timeout={500}
+              in={animationLike}
+              classNames="card__like-counter_animation"
+          >
+          <p ref={nodeRef} className={likeCounterClass}>{likes.length}</p>
+            </CSSTransition>
         </div>
       </div>
     </li>

@@ -1,7 +1,5 @@
-import React, { useCallback } from 'react';
-import {
-  withRouter, Route, Switch, useHistory,
-} from 'react-router-dom';
+import React, {useCallback} from 'react';
+import {Redirect, Route, Switch, useHistory, withRouter} from 'react-router-dom';
 import '../index.css';
 import Header from './Header';
 import Main from './Main';
@@ -11,10 +9,9 @@ import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import ConfirmDeletePopup from './ConfirmDeletePopup';
-import Spinner from './Spinner';
 import Page404 from './Page404';
-import { api } from '../utils/Api';
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
+import {api} from '../utils/Api';
+import {CurrentUserContext} from '../contexts/CurrentUserContext';
 import ProtectedRoute from './ProtectedRoute';
 import Login from './Login';
 import Register from './Register';
@@ -177,11 +174,13 @@ State for waiting while loading data
     setSubmiting(true);
     api.updateUserInfo(data).then((result) => {
       setUserInfo((prevState) => {
-        const newUser = { ...prevState, ...result };
-        return newUser;
+        return {...prevState, ...result};
       });
     }).catch((err) => {
       console.log(err);
+      setTooltipPopup(true);
+      setTooltipMessage('Что-то пошло не так!\n'
+          + 'Попробуйте ещё раз.');
     }).finally(() => {
       closeAllPopups();
       setSubmiting(false);
@@ -196,8 +195,7 @@ State for waiting while loading data
     setSubmiting(true);
     api.updateUserAvatar(data).then((result) => {
       setUserInfo((prevState) => {
-        const newUser = { ...prevState, ...result };
-        return newUser;
+        return {...prevState, ...result};
       });
     }).catch((err) => {
       console.log(err);
@@ -222,6 +220,9 @@ State for waiting while loading data
 
     }).catch((err) => {
       console.log(err);
+      setTooltipPopup(true);
+      setTooltipMessage('Что-то пошло не так!\n'
+          + 'Попробуйте ещё раз.');
     })
   }
   /**
@@ -289,6 +290,8 @@ State for waiting while loading data
       if (data) {
         history.push('/');
         setLoggedIn(true);
+        setTooltipPopup(true);
+        setTooltipMessage('Вы успешно вошли в приложение!');
       } else {
         setTooltipPopup(true);
         setTooltipMessage('Что-то пошло не так!\n'
@@ -317,8 +320,7 @@ State for waiting while loading data
       if (token) {
         auth.checkToken(token).then((data) => {
           setUserInfo((prevState) => {
-            const newUser = { ...prevState, login: { ...data } };
-            return newUser;
+            return {...prevState, login: {...data}};
           });
           setLoggedIn(true);
           history.push('/');
@@ -334,8 +336,7 @@ State for waiting while loading data
       setLoading(true);
       Promise.all([api.getUserInfo(), api.getInitialCards()]).then(([userData, initialCards]) => {
         setUserInfo((prevState) => {
-          const newUser = { ...prevState, ...userData };
-          return newUser;
+          return {...prevState, ...userData};
         });
         setCards(initialCards);
       }).catch((err) => {
@@ -359,46 +360,40 @@ State for waiting while loading data
           onMobileMenu={handleMobileMenu}
         />
         <Switch>
-          {!loggedIn && (
             <Route path="/sign-in">
               <Login isSubmitting={isSubmitting} onLogin={handleLogin} />
             </Route>
-          ) }
-          {!loggedIn && (
             <Route path="/sign-up">
               <Register isSubmitting={isSubmitting} onRegister={handleRegister} />
             </Route>
-          ) }
           <ProtectedRoute
-            path="/"
-            component={() => (isLoading ? <Spinner />
-              :
-                (<Main
-                  onAddPlace={handleAddPlaceClick}
-                  onEditProfile={handleEditProfileClick}
-                  onEditAvatar={handleEditAvatarClick}
-                  cardClick={handleCardClick}
-                  cards={cards}
-                  onCardLike={handleCardLike}
-                  onDeletePopup={handleDeletePopupClick}
-                />
-              ))}
-            loggedIn={loggedIn}
+              path="/"
+              component={Main}
+              onAddPlace={handleAddPlaceClick}
+              onEditProfile={handleEditProfileClick}
+              onEditAvatar={handleEditAvatarClick}
+              cardClick={handleCardClick}
+              cards={cards}
+              onCardLike={handleCardLike}
+              onDeletePopup={handleDeletePopupClick}
+              loggedIn={loggedIn}
+              isLoading={isLoading}
           />
 
+          <Route>
+            {loggedIn ? <Redirect to={'/'}/> : <Redirect to={'/sign-in'}/>}
+          </Route>
           <Route path="*">
             <Page404 />
           </Route>
         </Switch>
         <Footer />
-        { (
           <InfoTooltip
             name="info-tooltip"
             message={tooltipMessage}
             isOpen={isTooltipOpen}
             onClose={closeAllPopups}
           />
-        )}
         {loggedIn && (
           <>
             <ConfirmDeletePopup

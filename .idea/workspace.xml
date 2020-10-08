@@ -5,45 +5,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Feature: add auth">
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/CardInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/props/AddPlaceProps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/props/MainProps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/props/ProtectedRouteProps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/props/RegisterProps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="39d710d6-3324-43dc-b36b-aa2058fed41b" name="Default Changelist" comment="Fix:Fixed hoc ProtectedRoute and animations">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_10_2020,_13_04_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_10_2020,_13_04_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_10_2020__13_04__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blocks/card/__like-counter/_animation/card__like-counter_animation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__like-counter/_animation/card__like-counter_animation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/card/__like-counter/card__like-counter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__like-counter/card__like-counter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddPlacePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmDeletePopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditAvatarPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditProfilePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ImagePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImagePopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InfoTooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfoTooltip.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Page404.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/SubmitButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/GiphyApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GiphyApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/formHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/formHelper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/__login-container/_mobile/header__login-container_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/props/ProtectedRouteProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/props/ProtectedRouteProps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +74,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -286,7 +260,8 @@
     <MESSAGE value="hotfix: fixed react transition group warning" />
     <MESSAGE value="hotfix: fixed transition animation" />
     <MESSAGE value="refactor: linter and form hook" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: linter and form hook" />
+    <MESSAGE value="Fix:Fixed hoc ProtectedRoute and animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:Fixed hoc ProtectedRoute and animations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="600" y="351" key="#ESLint" timestamp="1601720714389">
@@ -332,11 +307,11 @@
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="372" y="169" key="RollbackChangesDialog/0.23.1440.838@0.23.1440.838" timestamp="1601379436374" />
-    <state x="59" y="38" key="SettingsEditor" timestamp="1601654416803">
-      <screen x="0" y="23" width="1440" height="838" />
+    <state x="257" y="25" key="SettingsEditor" timestamp="1602153538875">
+      <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="59" y="38" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1601654416803" />
-    <state x="257" y="25" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1600352325046" />
+    <state x="257" y="25" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1602153538875" />
     <state x="257" y="25" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1596535318792" />
     <state x="110" y="200" key="Vcs.Push.Dialog.v2" timestamp="1600361305346">
       <screen x="0" y="23" width="1440" height="838" />
