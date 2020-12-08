@@ -29,6 +29,9 @@ $ npm install
 
 ### Запуск
 $ npm run start
+
+### Адрес
+shum.students.nomoreparties.xyz
 ### В планах
 * Избранное
 * Добавлять карточки drag & drop
